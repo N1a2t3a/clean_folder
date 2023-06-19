@@ -1,21 +1,12 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name='clean_folder',  
-    version='1.0', 
-     # Список пакетів, які входять до пакету clean_folder
-    packages=['clean_folder'], 
-
-    # Вказуємо точку входу для консольного скрипту
-    entry_points={  
-        'console_scripts': [
-            # Команда clean-folder буде викликати функцію main з модуля clean.py
-            'clean-folder=clean_folder.clean:main'  
-        ]
-    },
-
-    install_requires=[
-        # перелік залежностей 
-    ]
+    name='clean_folder',
+    version='1.0',
+    author='Your Name',
+    author_email='your_email@example.com',
+    description='A folder cleanup utility',
+    packages=find_packages(),
+    scripts=['clean_folder/clean.py'],
 )
 
